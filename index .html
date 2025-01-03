@@ -1,0 +1,141 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistance Measuring</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #ff5f6d;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resistance Calculator</h1>
+        <label for="voltage">Voltage (V):</label>
+        <input type="number" id="voltage" placeholder="Enter Voltage" step="any">
+
+        <label for="current">Current (I):</label>
+        <input type="number" id="current" placeholder="Enter Current" step="any">
+
+        <button onclick="calculateResistance()">Calculate Resistance</button>
+
+        <div class="result" id="result">Resistance: --</div>
+    </div>
+
+    <script>
+        function calculateResistance() {
+            const voltage = parseFloat(document.getElementById('voltage').value);
+            const current = parseFloat(document.getElementById('current').value);
+
+            if (!isNaN(voltage) && !isNaN(current) && current !== 0) {
+                const resistance = (voltage / current).toFixed(2);
+                document.getElementById('result').textContent = `Resistance: ${resistance} Ω`;
+            } else {
+                document.getElementById('result').textContent = 'Please enter valid values!';
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Electronics Calculator</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Electronics Calculator</h1>
+
+        <label for="voltage">Voltage (V):</label>
+        <input type="number" id="voltage" placeholder="Enter Voltage" step="any">
+
+        <label for="current">Current (I):</label>
+        <input type="number" id="current" placeholder="Enter Current" step="any">
+
+        <label for="energy">Energy (E):</label>
+        <input type="number" id="energy" placeholder="Enter Energy" step="any">
+
+        <button onclick="calculateValues()">Calculate</button>
+
+        <div class="result" id="result">Results will appear here</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
